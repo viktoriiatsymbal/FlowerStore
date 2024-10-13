@@ -2,7 +2,7 @@ package flower.store;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions;
+// import static org.junit.jupiter.api.Assertions;
 import java.util.ArrayList;
 
 public class StoreTest {
@@ -42,7 +42,8 @@ public class StoreTest {
     @Test
     public void testSearchFlByTypeAndColorFound() {
         ArrayList<Flower> result = store.search(firstTypeAndColor);
-        assertEquals(2, result.size(), "There should be 2 flowers matching type and color.");
+        assertEquals(2, result.size(),
+                     "There should be 2 flowers matching type and color.");
         assertTrue(result.contains(firstFlower));
         assertTrue(result.contains(secondFlower));
     }
@@ -53,14 +54,14 @@ public class StoreTest {
             "Lily", "White");
         ArrayList<Flower> result = store.search(nonExistentTypeAndColor);
         assertEquals(0, result.size(), 
-                     "There should be no flowers matching the non-existent type and color.");
+        "There should be no flowers matching the non-existent type and color.");
     }
 
     @Test
     public void testSearchForSingleMatch() {
         ArrayList<Flower> result = store.search(secondTypeAndColor);
         assertEquals(1, result.size(), 
-                     "There should be 1 flower matching the given type and color.");
+        "There should be 1 flower matching the given type and color.");
         assertTrue(result.contains(thirdFlower));
     }
 }
