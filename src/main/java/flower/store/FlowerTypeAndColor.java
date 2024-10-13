@@ -10,6 +10,7 @@ public class FlowerTypeAndColor {
     }
 
     public Boolean matches(FlowerTypeAndColor tandc) {
-        return flowerType.equals(tandc.flowerType) && colour.equals(tandc.colour);
+        return flowerType.equals(tandc.flowerType)
+            && colour.equals(tandc.colour);
     }
 }
