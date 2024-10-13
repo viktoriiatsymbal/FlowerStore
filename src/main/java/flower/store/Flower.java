@@ -28,4 +28,8 @@ public class Flower {
     public String getColor() {
         return color.toString();
     }
+
+    public FlowerTypeAndColor getTypeAndColor() {
+        return new FlowerTypeAndColor(flowerType, color);
+    }
 }
